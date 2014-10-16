@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>IBS: Class Notes</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/kickstart.js"></script> <!-- KICKSTART -->
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="normalize.css" media="all" /> <!--NORMALIZE-->
+        <link rel="stylesheet" href="css/kickstart.css" media="all" /> <!-- KICKSTART -->
+        <link rel="stylesheet" href="css/kickstart-menus.css" media="all" /> <!--KICKSTART-->
+        <link rel="stylesheet" href="css/kickstart-grid.css" media="all" /> <!--KICKSTART-->
+        <link rel="stylesheet" href="css/kickstart-buttons.css" media="all" /> <!--KICKSTART-->
+        <link rel="stylesheet" href="css/kickstart-forms.css" media="all" /> <!--KICKSTART-->
+        <link rel="stylesheet" href="css/prettify.css" media="all" /> <!--KICKSTART-->
+        <link rel="stylesheet" href="style.css" media="all" />
+    </head>
+    <body>
+        <header>
+        </header>
+        <div id="main">
+            <div id="navigation">
+                <!--Logo-->
+                <div id="logo"></div>
+                <div id="welcome-user">Welcome, Amy O!</div>
+                <!-- Menu Vertical Left -->
+                <ul class="menu vertical menu-bar">
+                    <!--<li class="current"><a href="index.html">Home</a></li>-->
+                    <li class="current"><a href="index.html">Class Notes</a></li>
+                    <li><a href="#">Daily Sheets</a></li>
+                    <li><a href="#">Class Assignment</a></li>
+                </ul>
+            </div>
+            <div id="content">
+                <div id="read_content">
+                    <div id="class_notes">
+                        <div>
+                            <div id="class_notes_del"><button>Delete Selected</button></div>
+                            <div id="class_notes_banner"><p class="section_banner">CLASS NOTES</p></div>   
+                        </div>    
+                        <table class="striped class_notes_table">
+                            <thead>
+                                <tr class="class_notes_header_row">
+                                    <th class="class_notes_column_header"><input type="checkbox" class="student_note" id="student_note_all" /></th>
+                                    <th class="class_notes_column_header">Name</th>
+                                    <th class="class_notes_column_header"> Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="class_notes_data_row">
+                                    <td class="class_notes_column_data"><input type="checkbox" class="student_note" id="student_note1" /></td>
+                                    <td class="class_notes_column_data">Aezrael Olstead</td>
+                                    <td class="class_notes_column_data">
+                                        <ul class="class_notes_notes_list">
+                                            <li class="class_notes_notes_list_item"><input type="checkbox" class="note student_note1" id="note1_1" /> Gingerbread person brought today.</li>
+                                            <li class="class_notes_notes_list_item"><input type="checkbox" class="note student_note1" id="note1_2" /> Lunch substitute in the kitchen refrigerator.</li>
+                                            <li class="class_notes_notes_list_item"><input type="checkbox" class="note student_note1" id="note1_3" /> No pacifier at nap time.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="class_notes_data_row">
+                                    <td class="class_notes_column_data"><input type="checkbox" class="student_note" id="student_note2" /></td>
+                                    <td class="class_notes_column_data">Emma Li Olstead</td>
+                                    <td class="class_notes_column_data">
+                                        <ul class="class_notes_notes_list">
+                                            <li class="class_notes_notes_list_item"><input type="checkbox" class="note student_note2" id="note2_1" /> Food in refrigerator.</li>
+                                            <li class="class_notes_notes_list_item"><input type="checkbox" class="note student_note2" id="note2_2" /> Eye drops twice daily.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="allergies">
+                        <p id="allergy_banner" class="section_banner">ALLERGIES</p>
+                        <table class=" tight striped allergy_table">
+                            <thead>
+                                <tr class="allergy_header_row">
+                                    <th class="allergy_column_header">Name</th>
+                                    <th class="allergy_column_header">Allergies</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <tr class="allergy_data_row">
+                                    <td class="allergy_column_data">Aezreal Olstead</td>
+                                    <td class="allergy_column_data">
+                                        <ul class="allergy_list">
+                                            <li class="allergy_list_item allergy"><i class="icon-minus-sign"></i>Gluten</li>
+                                            <li class="allergy_list_item sensitivity"><i class="icon-warning-sign"></i>Oats</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="allergy_data_row">
+                                    <td class="allergy_column_data">Emma Li Olstead</td>
+                                    <td class="allergy_column_data">
+                                        <ul class="allergy_list">
+                                            <li class="allergy_list_item dietary_preference"><i class="icon-leaf"></i>NO Grains</li>
+                                            <li class="allergy_list_item dietary_preference"><i class="icon-leaf"></i>NO Cereals</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="write_content">
+                    <div id="add_note">
+                        <div id="add_note_text">
+                            <label for="class_note_text" id="lblClassNoteTxt">Note:</label>
+                            <input id="class_note_text" type="text" placeholder="Enter Note Here" />
+                            <button id="btnAddNote">Add Note</button>
+                        </div>
+                        <div id="add_note_select">
+                            <table class="striped" id="student_list">
+                                <thead id="student_list_head">
+                                    <tr class="student_list_header_row">
+                                        <th><input type="checkbox" id="check_all" /></th>
+                                        <th>Name</th>
+                                        <th>Homeroom</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="student_list_body">
+                                    <tr>
+                                        <td><input type="checkbox" class="student" id="check1" /></td>
+                                        <td>Aezrael Olstead</td>
+                                        <td>Hungry Caterpillar</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="student" id="check2" /></td>
+                                        <td>Emma Li Olstead</td>
+                                        <td>Commotion in the Ocean</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="student" id="check3" /></td>
+                                        <td>Jane Doe</td>
+                                        <td>Wild Things A</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="student" id="check4" /></td>
+                                        <td>Sam Sombody</td>
+                                        <td>Rumble in the Jungle</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+        </footer>
+    </body>
+</html>
